@@ -77,7 +77,7 @@
                             </fo:table-cell >
                             <fo:table-cell text-align="left" border-width="0.5mm">
                                 <fo:block>
-                                    <fo:basic-link external-destination="url(document.php?objectId-0={obj:objectId})" color="blue" text-decoration="underline">
+                                    <fo:basic-link external-destination="url('http://{obj:linkDocument}')" color="blue" text-decoration="underline">
                                         <xsl:value-of select="obj:displayName" />
                                     </fo:basic-link>
                                 </fo:block>

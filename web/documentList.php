@@ -39,6 +39,12 @@ if (!$hreq->isEmpty()) {
 			if (strpos($strtoLower, mb_convert_case($req->docName, MB_CASE_LOWER, "UTF-8")) === FALSE) continue;
 		}
 		$doc = new TestApp_Document();
+		//Добавляем в $row link на документ
+		if ( isset($row['objectId']) && !empty( $row['objectId'] ) ){
+			$linkDocument = '/'. $_SERVER['SERVER_NAME']. '/testapp/web/document.php?objectId='.$row['objectId'];
+			$row['linkDocument'] = $linkDocument;
+		}
+
 		$doc->fromArray($row);
 		$doc->toXmlWriter($xw);
 	}

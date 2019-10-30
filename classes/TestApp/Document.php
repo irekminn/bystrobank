@@ -110,6 +110,12 @@ class TestApp_Document extends Adaptor_XMLBase implements Adaptor_Array {
 	 */
 	private $keyId;
 	/**
+	 * Ссылка на документ
+	 *
+	 * @var string
+	 */
+	private $linkDocument;
+	/**
 	 * Вывод в XMLWriter
 	 * @codegen true
 	 * @param XMLWriter $xw
@@ -136,6 +142,7 @@ class TestApp_Document extends Adaptor_XMLBase implements Adaptor_Array {
 			if($this->keywords!==NULL) {$xw->writeElement("keywords",$this->keywords);}
 			if($this->docDate!==NULL) {$xw->writeElement("docDate",$this->docDate->LogicalToXSD());}
 			if($this->keyId!==NULL) {$xw->writeElement("keyId",$this->keyId);}
+			if($this->linkDocument!==NULL) {$xw->writeElement("linkDocument",$this->linkDocument);}
 		if ($mode&Adaptor_XML::ENDELEMENT) $xw->endElement();
 	}
 	/**
@@ -195,6 +202,7 @@ class TestApp_Document extends Adaptor_XMLBase implements Adaptor_Array {
 		if(isset($row["keywords"])) $this->keywords=$row["keywords"];
 		if(isset($row["docDate"])) $this->docDate=new Basictypes_Date($row["docDate"],$mode);
 		if(isset($row["keyId"])) $this->keyId=$row["keyId"];
+		if(isset($row["linkDocument"])) $this->linkDocument=$row["linkDocument"];
 		return $this;
 	}
 }

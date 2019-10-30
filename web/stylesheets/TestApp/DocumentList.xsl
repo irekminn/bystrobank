@@ -122,7 +122,7 @@
 							<xsl:value-of select="obj:docDate" />
 						</td>
 						<td>
-							<a href="document.php?objectId-0={obj:objectId}">
+							<a href="/{obj:linkDocument}">
 								<xsl:value-of select="obj:displayName" />
 							</a>
 						</td>
