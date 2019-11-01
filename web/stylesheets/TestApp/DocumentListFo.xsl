@@ -9,7 +9,7 @@
     <xsl:output method="xml" encoding="UTF-8" indent="yes" />
     <xsl:strip-space elements="*" />
     <xsl:template match="/">
-        <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-family="Arial" font-weight="bold" font-style="normal" font-size="10pt" language="ru">
+        <fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-family="Liberation Serif" font-size="10pt" language="ru">
             <fo:layout-master-set>
                 <fo:simple-page-master master-name="A4Form" page-height="29.7cm" page-width="21cm" margin="1cm 1.5cm 1cm 1.5cm">
                     <fo:region-body />
@@ -18,7 +18,7 @@
             </fo:layout-master-set>
             <fo:page-sequence master-reference="A4Form" initial-page-number="1">
                 <fo:static-content flow-name="xsl-region-after">
-                    <fo:block text-align="end" font-size="7pt" font-family="sans-serif" line-height="36pt">
+                    <fo:block text-align="end" font-size="7pt" line-height="36pt">
                         <fo:page-number />
                     </fo:block>
                 </fo:static-content>
